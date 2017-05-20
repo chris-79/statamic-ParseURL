@@ -16,6 +16,8 @@ class ParseUrlModifier extends Modifier
    */
   public function index($value, $params, $context)
   {
+    $desiredPiece = false;
+    
     if ($param = array_get($params, 0)) {
       $param = array_get($context, $param, $param);
       switch ($param) {
@@ -42,9 +44,6 @@ class ParseUrlModifier extends Modifier
           break;
         case 'fragment':
           $desiredPiece = PHP_URL_FRAGMENT;
-          break;
-        default:
-          $desiredPiece = null;
           break;
       }
     }
