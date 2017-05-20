@@ -4,7 +4,7 @@ Uses PHP's `parse_url` to return specified pieces of a given URL.
 
 ## Installation
 
-1. Move the `statamic-ParseURL` folder to `site/addons/ParseURL` (removing the `statamic-` bit)
+1. Move the `statamic-ParseURL` folder to `site/addons/ParseUrl`, in CamelCase, not capital letters (removing the `statamic-` bit)
 2. `cd` into your site's directory.
 3. Run `php please addons:refresh`
 
@@ -13,7 +13,7 @@ Uses PHP's `parse_url` to return specified pieces of a given URL.
 In your template, call the modifier like this:
 
 ```
-{{ current_url | parseurl:[option] }}
+{{ current_url | parse_url:[option] }}
 ```
 
 … where `[option]` is one of:

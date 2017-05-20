@@ -1,10 +1,10 @@
 <?php
 
-namespace Statamic\Addons\ParseURL;
+namespace Statamic\Addons\ParseUrl;
 
 use Statamic\Extend\Modifier;
 
-class ParseURLModifier extends Modifier
+class ParseUrlModifier extends Modifier
 {
   /**
    * Modify a value
