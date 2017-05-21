@@ -1,10 +1,10 @@
 <?php
 
-namespace Statamic\Addons\ParseURL;
+namespace Statamic\Addons\ParseUrl;
 
 use Statamic\Extend\Modifier;
 
-class ParseURLModifier extends Modifier
+class ParseUrlModifier extends Modifier
 {
   /**
    * Modify a value
@@ -16,6 +16,8 @@ class ParseURLModifier extends Modifier
    */
   public function index($value, $params, $context)
   {
+    $desiredPiece = false;
+    
     if ($param = array_get($params, 0)) {
       $param = array_get($context, $param, $param);
       switch ($param) {
@@ -42,9 +44,6 @@ class ParseURLModifier extends Modifier
           break;
         case 'fragment':
           $desiredPiece = PHP_URL_FRAGMENT;
-          break;
-        default:
-          $desiredPiece = null;
           break;
       }
     }
